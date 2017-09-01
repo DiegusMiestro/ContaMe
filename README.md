@@ -23,8 +23,7 @@ O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclus
 
 ### Referências:
 O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
-- [VueJS, documentação oficial](https://vuejs.org/)
-- [Laravel, documentação oficial](https://laravel.com/)
-- [Material Designer Lite](https://getmdl.io/)
+- [Docker](https://docs.docker.com/)
+- [VueJS](https://vuejs.org/v2/guide/)
 - [A progressive web application with vue js webpack material design](https://blog.sicara.com/a-progressive-web-application-with-vue-js-webpack-material-design-part-1-c243e2e6e402)
 - [Vue.js 2 Quickstart Tutorial 2017](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
