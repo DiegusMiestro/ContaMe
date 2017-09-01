@@ -17,13 +17,14 @@ O sistema irá gerar relatórios através dos dados financeiros cadastrados pelo
 O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
 - [Docker](https://www.docker.com/)
 - [VueJS 2](https://vuejs.org/)
-  - Vuex
   - Vue-Router
+  - Vuex
   - Vue Resource
 
 ### Referências:
 O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
 - [Docker](https://docs.docker.com/)
 - [VueJS](https://vuejs.org/v2/guide/)
-- [A progressive web application with vue js webpack material design](https://blog.sicara.com/a-progressive-web-application-with-vue-js-webpack-material-design-part-1-c243e2e6e402)
+- [Vue.js: a (re)introduction](https://medium.com/@youyuxi/vue-js-a-re-introduction-ed159414a1be)
 - [Vue.js 2 Quickstart Tutorial 2017](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
+- [A progressive web application with vue js webpack material design](https://blog.sicara.com/a-progressive-web-application-with-vue-js-webpack-material-design-part-1-c243e2e6e402)
