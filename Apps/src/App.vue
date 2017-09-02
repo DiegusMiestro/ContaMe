@@ -9,10 +9,9 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Início</router-link>
+          <router-link class="mdl-navigation__link" to="/invoices" @click.native="hideMenu">Parcelas</router-link>
+          <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Nova Conta</router-link>
         </nav>
       </div>
     </header>
@@ -20,10 +19,9 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Title</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Início</router-link>
+        <router-link class="mdl-navigation__link" to="/invoices" @click.native="hideMenu">Parcelas</router-link>
+        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Nova Conta</router-link>
       </nav>
     </div>
 
@@ -37,7 +35,13 @@
 <script>
 require('material-design-lite')
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    hideMenu: function () {
+      document.getElementsByClassName('mdl-layout__drawer')[0].classList.remove('is-visible')
+      document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.remove('is-visible')
+    }
+  }
 }
 </script>
 
