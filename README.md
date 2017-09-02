@@ -1,17 +1,19 @@
 # ContaMe
 
-Este sistema tem como propósito servir de estudo e auxilio nos controles de contas a pagar e contas a receber em ambiente doméstico.
+Sistema web cuja principal função é gerar relatórios simples sobre as contas a serem pagas e recebidas pelo usuário, em ambiente doméstico. As contas devem ser devidamente cadastradas, onde no cadastros é informado a quantidade de pagamentos a ser realizado, o valor de cada pagamento e as datas destes pagamentos.
 
-### Objetivo do Sistema
+Informações de recebimento são importantes para o sistema poder informar se haverá dívida não paga ao final do mês.
 
-O sistema irá gerar relatórios através dos dados financeiros cadastrados pelo usuário. As contas a pagar e contas pagas deverão ser devidamente registradas, assim como a renda do usuário, sendo ela fixa ou variável por mês e quaisquer outras formas de renda que o usuário tenha tido ao longo do mês, para que assim possa ser exibido um relatório com a estimativa de como será a situação financeira ao final do mês, e como tem sido dos meses anteriores.
+### Objetivo Geral do Sistema
+
+Aprender novas ferramentas e métodos modernos de desenvolvimento web e desenvolver um sistema funcional de controle de gastos domésticos.
 
 ### Objetivos Gerais
 
 - Estudo do [VueJS](https://vuejs.org/), biblioteca / framework de Javascript;
 - Estudo de desenvolvimento de [Aplicações Web Progressivas](https://developers.google.com/web/progressive-web-apps/);
 - Estudo de desenvolvimento de [REST API](http://www.restapitutorial.com/);
-- Ser uma aplicação totalmente funcional.
+- Desenvolvier uma aplicação de controle de gastos domésticos que seja totalmente funcional.
 
 ### Tecnologias Utilizadas
 O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
