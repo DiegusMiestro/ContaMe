@@ -3,51 +3,49 @@
   <div id="home">
     <h1>Tela Inicial do Sistema ContaMe</h1>
     <nav>
-      <router-link :to="{path: '/invoice/2017/' + month.id}" v-for="month in this.months" v-bind:month.id=month.title class="">
+      <router-link :to="{path: '/2017/' + month.id}" v-for="month in months" v-bind:month.id=month.title class="">
         {{month.title}}
       </router-link>
     </nav>
 
-    {{this.payment_new}}
-
-    <div class="mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title mdl-card--expand">
-        <h4>Adicionar Novo Pagamento:</h4>
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="payment-new--description" v-model="this.payment_new.description">
-          <label class="mdl-textfield__label" for="payment-new--description">Descrição</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="payment-new--value" v-model="this.payment_new.value">
-          <label class="mdl-textfield__label" for="payment-new--value">R$ Valor</label>
-        </div>
-        <div class="mdl-layout-spacer"></div>
-        <button v-on:click='addPayment' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Adicionar
-        </button>
-      </div>
-    </div>
-
-    <h5>Contas do mês de Agosto</h5>
+    <h5>Contas do mês de {{months[month-1]['title']}} de {{year}}</h5>
     <table class="mdl-data-table mdl-js-data-table">
       <thead>
         <tr>
-          <th>Ano / Mês</th>
+          <th>Pagamento</th>
           <th class="mdl-data-table__cell--non-numeric">Descrição</th>
           <th>Valor (R$)</th>
+          <th>Ação</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="pay in this.payments">
-          <th>{{pay.year}} / {{pay.month}}</th>
-          <th class="mdl-data-table__cell--non-numeric">{{pay.description}}</th>
-          <th>{{pay.value}}</th>
+        <tr>
+          <td>{{day}} / {{month}} / {{year}}</td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <input class="" type="text" v-model="payment_add.description" />
+          </td>
+          <td>
+            <input class="" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="payment-new--value" v-model="payment_add.value" />
+          </td>
+          <td>
+            <button v-on:click='addPayment' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Adicionar
+            </button>
+          </td>
         </tr>
         <tr>
-          <th colspan="2">Total:</th>
-          <th>{{payment}}</th>
+          <td colspan="3">Valor ao Final do Mês:</td>
+          <td>R$&nbsp;{{payment}}</td>
+        </tr>
+        <tr v-for="pay in this.payments">
+          <td>{{pay.day}} / {{pay.month}} / {{pay.year}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{pay.description}}</td>
+          <td>{{pay.value}}</td>
+          <td>
+            <button v-on:click='rmPayment(pay)' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Remover
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -61,8 +59,17 @@ export default {
   data () {
     return {
       'months': data.months,
-      'payments': data.payments,
-      'payment_new': {'year': 2017, 'month': 8, 'description': 'Nothing', 'value': 0.0}
+      'payments': [
+        {'year': 2017, 'month': 8, 'day': 10, 'description': 'Salário', 'value': 1000.00},
+        {'year': 2017, 'month': 8, 'day': 12, 'description': 'Sorvete Sorvita', 'value': -18.5}
+      ].reverse(),
+      'year': new Date().getFullYear(),
+      'month': new Date().getMonth(),
+      'day': new Date().getDate(),
+      'payment_add': {
+        'description': null,
+        'value': null
+      }
     }
   },
   computed: {
@@ -76,9 +83,19 @@ export default {
   },
   methods: {
     addPayment: function () {
-      this.payments.push(this.payment_new)
-      // this.payment_new.description = ''
-      // this.payment_new.value = 0.0
+      this.payments.unshift({
+        'year': Number(this.year),
+        'month': Number(this.month),
+        'day': Number(this.day),
+        'description': this.payment_add.description,
+        'value': Number(this.payment_add.value)
+      })
+      this.payment_add.description = null
+      this.payment_add.value = null
+    },
+    rmPayment: function (pay) {
+      let index = this.payments.findIndex(x => x === pay)
+      this.payments.splice(index, 1)
     }
   }
 }
