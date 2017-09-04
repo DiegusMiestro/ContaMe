@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/invoices',
+      path: '/:year/:month',
       name: 'Invoice',
       component: Invoice
     }
