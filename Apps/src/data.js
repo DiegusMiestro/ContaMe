@@ -12,24 +12,5 @@ export default {
     {'id': 10, 'title': 'Outubro', 'alias': 'OUT'},
     {'id': 11, 'title': 'Novembro', 'alias': 'NOV'},
     {'id': 12, 'title': 'Dezembro', 'alias': 'DEZ'}
-  ],
-  payments: [
-    {'year': 2017, 'month': 8, 'description': 'Cartão de Crédito', 'value': -300.00},
-    {'year': 2017, 'month': 8, 'description': 'Internet', 'value': -150.00},
-    {'year': 2017, 'month': 8, 'description': 'Conta de Água', 'value': -70.00},
-    {'year': 2017, 'month': 8, 'description': 'Conta de Luz', 'value': -120.00},
-    {'year': 2017, 'month': 8, 'description': 'Curso', 'value': -200.00},
-    {'year': 2017, 'month': 8, 'description': 'Corte de Cabelo', 'value': -15.00},
-    {'year': 2017, 'month': 8, 'description': 'Sorvete', 'value': -18.50},
-    {'year': 2017, 'month': 8, 'description': 'Casa Pio', 'value': -50.00},
-    {'year': 2017, 'month': 8, 'description': 'Almoço', 'value': -16.00},
-    {'year': 2017, 'month': 8, 'description': 'Pizza', 'value': -24.00},
-    {'year': 2017, 'month': 8, 'description': 'Almoço', 'value': -16.00},
-    {'year': 2017, 'month': 8, 'description': 'Almoço', 'value': -16.00},
-    {'year': 2017, 'month': 8, 'description': 'Plano Dentário', 'value': -15.00},
-    {'year': 2017, 'month': 8, 'description': 'Ortodontia', 'value': -70.00},
-    {'year': 2017, 'month': 8, 'description': 'Almoço', 'value': -16.00},
-    {'year': 2017, 'month': 8, 'description': 'Almoço', 'value': -16.00},
-    {'year': 2017, 'month': 8, 'description': 'Salário', 'value': 1000.00}
   ]
 }
