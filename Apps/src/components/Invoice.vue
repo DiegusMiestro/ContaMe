@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <h1>Parcela: {{$route.params.month}} / {{$route.params.year}}</h1>
+  <h1>Pagamentos de {{months[month-1]['title']}} / {{year}}</h1>
 
 </template>
 
@@ -9,7 +9,9 @@ import data from '../data'
 export default {
   data () {
     return {
-      'months': data.months
+      'months': data.months,
+      'year': this.$route.params.year,
+      'month': this.$route.params.month
     }
   }
 }
