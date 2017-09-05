@@ -9,6 +9,4 @@ lsb-release \
 gnupg && \
 curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 apt install -y nodejs && \
-npm install -g vue-cli
-
-CMD ["bash"]
+npm install -g vue-cli quasar-cli
