@@ -1,6 +1,6 @@
 FROM debian:latest
 
-WORKDIR /apps
+WORKDIR /app
 
 RUN apt update && apt upgrade -y && apt install -y \
 curl \
