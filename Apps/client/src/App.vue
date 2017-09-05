@@ -3,9 +3,9 @@
   <div id="q-app">
     <header></header>
     <main>
-      <img src="~assets/quasar-logo-full.svg" alt="Quasar PWA">
       <router-view></router-view>
     </main>
+    <footer></footer>
   </div>
 </template>
 
