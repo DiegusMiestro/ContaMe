@@ -11,12 +11,13 @@ require(`quasar/dist/quasar.${__THEME}.css`)
 // require(`quasar/dist/quasar.ie.${__THEME}.css`)
 
 import Vue from 'vue'
-import Quasar from 'quasar'
+import Quasar, {AddressbarColor} from 'quasar'
 import router from './router'
 import 'quasar-extras/material-icons'
 
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
+AddressbarColor.set('#a2e3fa')
 
 if (__THEME === 'mat') {
   // require('quasar-extras/roboto-font')
