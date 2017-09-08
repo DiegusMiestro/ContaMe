@@ -3,6 +3,7 @@
   <div id="q-app">
 
     <q-layout ref="layout" view="lHh LpR lFf" :right-breakpoint="1100">
+
       <!-- Header -->
       <q-toolbar slot="header" color="primary">
         <q-btn flat @click="$refs.layout.toggleLeft()">
@@ -12,12 +13,21 @@
           Sistema ContaMe
           <span slot="subtitle">Controle de contas pessoais</span>
         </q-toolbar-title>
+
       </q-toolbar>
 
       <!-- Navigation -->
       <q-tabs slot="navigation">
         <q-route-tab v-for="(nav, index) in navigate" :key="index" slot="title" :icon="nav.icon" :to="nav.link" replace hide="icon" :label="nav.label" />
       </q-tabs>
+
+      <ul class="breadcrumb">
+        <li><a><q-icon name="home" /></a></li>
+        <li><a><q-icon name="mail" /> Quasar</a></li>
+        <li><a><q-icon name="cloud" /> Breadcrumb</a></li>
+      </ul>
+
+      
 
       <!-- Left Side Panel -->
       <div slot="left">
@@ -29,6 +39,8 @@
           </q-side-link>
         </q-list>
       </div>
+
+
 
       <router-view />
 
@@ -51,7 +63,6 @@ import {
   QLayout,
   QToolbar,
   QToolbarTitle,
-  QSearch,
   QTabs,
   QRouteTab,
   QBtn,
@@ -59,8 +70,7 @@ import {
   QItemSide,
   QItemMain,
   QSideLink,
-  QListHeader,
-  QScrollArea
+  QListHeader
 } from 'quasar'
 
 import menus from './datas/menus'
@@ -70,7 +80,6 @@ export default {
     QLayout,
     QToolbar,
     QToolbarTitle,
-    QSearch,
     QTabs,
     QRouteTab,
     QBtn,
@@ -78,12 +87,12 @@ export default {
     QItemSide,
     QItemMain,
     QSideLink,
-    QListHeader,
-    QScrollArea
+    QListHeader
   },
   data () {
     return {
-      'navigate': menus.navigate
+      'navigate': menus.navigate,
+      'tabs': menus.tabs
     }
   }
 }
