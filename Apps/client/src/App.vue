@@ -2,7 +2,7 @@
   <!-- Don't drop "q-app" class -->
   <div id="q-app">
 
-    <q-layout ref="layout" view="lHh LpR lFf" :right-breakpoint="1100">
+    <q-layout ref="layout" view="hHh LpR fFf">
 
       <!-- Header -->
       <q-toolbar slot="header" color="primary">
@@ -20,19 +20,10 @@
       <q-tabs slot="navigation">
         <q-route-tab v-for="(nav, index) in navigate" :key="index" slot="title" :icon="nav.icon" :to="nav.link" replace hide="icon" :label="nav.label" />
       </q-tabs>
-
-      <ul class="breadcrumb">
-        <li><a><q-icon name="home" /></a></li>
-        <li><a><q-icon name="mail" /> Quasar</a></li>
-        <li><a><q-icon name="cloud" /> Breadcrumb</a></li>
-      </ul>
-
-      
-
       <!-- Left Side Panel -->
-      <div slot="left">
+      <div slot="left" class="">
         <q-list no-border link inset-separator>
-          <q-list-header>Essential Links</q-list-header>
+          <q-list-header>Menu Principal</q-list-header>
           <q-side-link item v-for="(nav, index) in navigate" :key="index" :to="nav.link">
             <q-item-side :icon="nav.icon" />
             <q-item-main :label="nav.label" :sublabel="nav.sublabel" />
@@ -40,13 +31,11 @@
         </q-list>
       </div>
 
-
-
       <router-view />
 
       <q-toolbar slot="footer">
         <q-toolbar-title>
-          Layout Footer
+          Desenvolvido para fins de estudo
         </q-toolbar-title>
       </q-toolbar>
     </q-layout>
@@ -93,6 +82,7 @@ export default {
     return {
       'navigate': menus.navigate,
       'tabs': menus.tabs
+
     }
   }
 }
