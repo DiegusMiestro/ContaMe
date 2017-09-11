@@ -59,13 +59,7 @@ module.exports = {
           loaders: merge({js: 'babel-loader'}, cssUtils.styleLoaders({
             sourceMap: useCssSourceMap,
             extract: env.prod
-          })),
-          transformToRequire: {
-            video: 'src',
-            source: 'src',
-            img: 'src',
-            image: 'xlink:href'
-          }
+          }))
         }
       },
       {

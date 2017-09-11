@@ -1,19 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/Home.vue'
-import Error404 from '@/Error404.vue'
-
 Vue.use(VueRouter)
 
-/*
- * Uncomment this section and use "load()" if you want
- * to lazy load routes.
 function load (component) {
   // '@' is aliased to src/components
   return () => import(`@/${component}.vue`)
 }
-*/
 
 export default new VueRouter({
   /*
@@ -29,7 +22,9 @@ export default new VueRouter({
    */
 
   routes: [
-    { path: '/', component: Home },
-    { path: '*', component: Error404 }
+    { path: '/', component: load('Hello') },
+
+    // Always leave this last one
+    { path: '*', component: load('Error404') } // Not found
   ]
 })

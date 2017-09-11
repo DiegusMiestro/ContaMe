@@ -11,25 +11,25 @@ require(`quasar/dist/quasar.${__THEME}.css`)
 // require(`quasar/dist/quasar.ie.${__THEME}.css`)
 
 import Vue from 'vue'
-import Quasar, {AddressbarColor} from 'quasar'
+import Quasar from 'quasar'
 import router from './router'
-import 'quasar-extras/material-icons'
 
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
-AddressbarColor.set('#a2e3fa')
 
 if (__THEME === 'mat') {
-  // require('quasar-extras/roboto-font')
+  require('quasar-extras/roboto-font')
 }
-// import 'quasar-extras/material-icons'
+import 'quasar-extras/material-icons'
 // import 'quasar-extras/ionicons'
 // import 'quasar-extras/fontawesome'
 // import 'quasar-extras/animate'
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#q-app',
-  router,
-  render: h => h(require('./App'))
+Quasar.start(() => {
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#q-app',
+    router,
+    render: h => h(require('./App'))
+  })
 })
