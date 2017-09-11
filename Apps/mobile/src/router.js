@@ -22,8 +22,10 @@ export default new VueRouter({
    */
 
   routes: [
-    { path: '/', component: load('Hello') },
-
+    { path: '/', component: load('Payments') },
+    { path: '/payments/', component: load('Payments') },
+    { path: '/month/', component: load('Month') },
+    { path: '/monthly/', component: load('Monthly') },
     // Always leave this last one
     { path: '*', component: load('Error404') } // Not found
   ]
