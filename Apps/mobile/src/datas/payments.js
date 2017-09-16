@@ -19,6 +19,21 @@ export default {
       'amount': -150.70,
       'description': 'Jantar de Aniversário de Fulano',
       'date': '2017-09-08'
+    },
+    {
+      'amount': -150.00,
+      'description': 'Parcela 3/3',
+      'date': '2016-10-10'
+    },
+    {
+      'amount': -150.00,
+      'description': 'Parcela 2/3',
+      'date': '2016-09-10'
+    },
+    {
+      'amount': -150.00,
+      'description': 'Parcela 1/3',
+      'date': '2016-08-10'
     }
   ],
   monthly: {
