@@ -62,7 +62,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="77.726725"
+     inkscape:cx="11.056657"
      inkscape:cy="69.555476"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -81,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -91,38 +91,34 @@
      id="layer1"
      transform="translate(0,-924.3622)">
     <circle
-       style="fill:#e6e6e6;fill-opacity:1;stroke:none;filter:url(#filter4173)"
+       style="fill:#6a1b9a;fill-opacity:1;stroke:none;filter:url(#filter4173)"
        id="path4171"
        cx="64"
        cy="988.36218"
        r="60" />
-    <g
-       id="g4165"
-       transform="matrix(0.95999998,0,0,0.95999998,2.560001,20.974792)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text4157"
-         y="1039.8615"
-         x="12.661939"
-         style="font-style:normal;font-weight:normal;font-size:20.76026344px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6a1b9a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Audiowide;-inkscape-font-specification:Audiowide;fill:#6a1b9a;fill-opacity:1;"
-           y="1039.8615"
-           x="12.661939"
-           id="tspan4159"
-           sodipodi:role="line">ContaMe</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4161"
-         y="1020.4965"
-         x="9.9006205"
-         style="font-style:normal;font-weight:normal;font-size:63.60248566px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6a1b9a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Audiowide;-inkscape-font-specification:Audiowide;fill:#6a1b9a;fill-opacity:1;"
-           y="1020.4965"
-           x="9.9006205"
-           id="tspan4163"
-           sodipodi:role="line">CM</tspan></text>
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:19.92985344px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="14.715462"
+       y="1019.2418"
+       id="text4157"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4159"
+         x="14.715462"
+         y="1019.2418"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Audiowide;-inkscape-font-specification:Audiowide;fill:#ffffff;fill-opacity:1;">ContaMe</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:61.05838394px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="12.064596"
+       y="1000.6514"
+       id="text4161"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4163"
+         x="12.064596"
+         y="1000.6514"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Audiowide;-inkscape-font-specification:Audiowide;fill:#ffffff;fill-opacity:1;">CM</tspan></text>
   </g>
 </svg>
