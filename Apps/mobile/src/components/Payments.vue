@@ -4,6 +4,20 @@
     <q-fixed-position corner="top-right" :offset="[12, -28]" class="btn-add">
       <q-btn round push color="secondary" @click="$refs.addPaymentModal.open()" icon="add" />
     </q-fixed-position>
+
+    <div class="row">
+      <q-dialog-select
+        v-model="month"
+        :options="months.all"
+        class="col-6 offset-1"
+      />
+      <q-dialog-select
+        v-model="year"
+        :options="years"
+        class="col-3 offset-1"
+      />
+    </div>
+
     <q-list sparse separator no-border>
       <q-item v-for="(pay, index) in payments" :key='index' >
         <q-item-main>
@@ -31,16 +45,16 @@
       <br />
       <div class="row">
         <q-datetime
-          class="col-10 offset-1"
-          v-model="add.date"
-          type="date"
-          stack-label="Vencimento do pagamento"
-          ok-label="Confirmar"
-          cancel-label="Cancelar"
-          clear-label=""
-          :month-names="months"
-          :day-names="weekdays"
-          format="DD/MM/YYYY"
+        class="col-10 offset-1"
+        v-model="add.date"
+        type="date"
+        stack-label="Vencimento do pagamento"
+        ok-label="Confirmar"
+        cancel-label="Cancelar"
+        clear-label=""
+        :month-names="months.list"
+        :day-names="weekdays.list"
+        format="DD/MM/YYYY"
         />
       </div>
       <br />
@@ -52,18 +66,29 @@
   </div>
 </template>
 <script>
-import payments from '../datas/payments'
-import periods from '../datas/periods'
-import { Toast, QModal, QList, QItem, QItemSide, QItemMain, QItemTile, QBtn, QFixedPosition, QInput, QDatetime, QRadio } from 'quasar'
+import Payments from '../datas/payments'
+import Periods from '../datas/periods'
+import { Toast, QModal, QList, QItem, QItemSide, QItemMain, QItemTile, QBtn, QFixedPosition, QInput, QDatetime, QRadio, QDialogSelect } from 'quasar'
 
 export default {
-  components: { Toast, QModal, QList, QItem, QItemSide, QItemMain, QItemTile, QBtn, QFixedPosition, QInput, QDatetime, QRadio },
+  components: { Toast, QModal, QList, QItem, QItemSide, QItemMain, QItemTile, QBtn, QFixedPosition, QInput, QDatetime, QRadio, QDialogSelect },
   data () {
     return {
-      payments: payments.everything,
-      months: periods.months.simplelist,
-      weekdays: periods.weekdays.simplelist,
+      payments: Payments.everything,
+      years: [{label: '2017', value: 2017}, {label: '2016', value: 2016}],
+      months: Periods.months,
+      weekdays: Periods.weekdays,
+      month: 8,
+      year: 2017,
       add: {'description': null, 'amount': null, 'date': null, 'signal': null}
+    }
+  },
+  watch: {
+    month: function () {
+      console.log('Update List Payments per Month: ' + this.months.all[this.month].label)
+    },
+    year: function () {
+      console.log('Update List Payments per Year: ' + this.year)
     }
   },
   methods: {
