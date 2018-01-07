@@ -8,3 +8,5 @@ ContaMe está sendo desenvolvido para satisfazer a necessidade, de seu desenvolv
 
 ## Funcionalidades
 1. Registrar contas a se pagar e a se receber, com suas datas de vencimentos.
+2. Ordenar as contas a se pagar em ordem de proximidade em relação a data atual da visualização, que não tenham sido pagas.
+3. Exibir valores positivos, gerados pelas contas a receber que foram recebidas no mês, e valores negativos, gerados pelas contas a pagar no mês, e o resultado esperado ao final do mês.
