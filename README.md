@@ -1,5 +1,5 @@
-# ContaMe - conta-lhe sobre suas contas.
-Sistema de controle pessoal de contas a pagar e a receber.
+# ContaMe (versão alpha em desenvolvimento)
+Contando-lhe sobre suas contas.
 
 ![2 + 2 = -5](img/title.jpg)
 
