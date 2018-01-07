@@ -1,23 +1,10 @@
-# ContaMe
+# ContaMe - conta-lhe sobre suas contas.
+Sistema de controle pessoal de contas a pagar e a receber.
 
-Sistema de controle de contas prestadas e recebidas pelo usuário ao longo do mês. 
-As contas devem ser todas registradas, tanto as recebidas - salários, serviços prestados, dinheiro devolvido etc - como as feitas pelo usuário - pagamento de contas, cartão de crédito, prestações, empréstimos feitos etc. 
-Sistema funcionará, inicialmente, em dispositivos mobile e apenas um usuário por dispositivo, não havendo registros de usuários compartilhados entre contas ou dispositivos.
+![2 + 2 = -5](img/title.jpg)
 
+## Sobre
+ContaMe está sendo desenvolvido para satisfazer a necessidade, de seu desenvolvedor, de controlar as finanças de cunho pessoal. O sistema irá lembrar ao seu usuário as contas que estão próximas de seus vencimentos e o quanto dos recusos do usuário, já foi gasto ao longo do mês e se ao final do mês haverá um saldo positivo ou negativo.
 
-### Tecnologias Utilizadas em Desenvolvimento
-O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
-- [Docker](https://www.docker.com/)
-- [VueJS 2](https://vuejs.org/)
-  - Vue-Router
-  - [Quasar Framework](http://quasar-framework.org)
-
-### Referências:
-O.B.S.: Esta lista poderá sofrer alterações ao longo do projeto, com a inclusão ou exclusão de tecnologias.
-- [Docker](https://docs.docker.com/)
-- [VueJS](https://vuejs.org/v2/guide/)
-- [Quasar Framework](http://quasar-framework.org)
-- [Vue.js: a (re)introduction](https://medium.com/@youyuxi/vue-js-a-re-introduction-ed159414a1be)
-- [Vue.js 2 Quickstart Tutorial 2017](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
-- [A progressive web application with vue js webpack material design](https://blog.sicara.com/a-progressive-web-application-with-vue-js-webpack-material-design-part-1-c243e2e6e402)
-- [Introdução ao Quasar Framework](https://codecasts.com.br/series/introducao-quasar)
+## Funcionalidades
+1. Registrar contas a se pagar e a se receber, com suas datas de vencimentos.
